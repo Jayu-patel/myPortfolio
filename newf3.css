@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 10px 5px -10px #111;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+.navigation .logo {
+    padding: 15px 0 15px 40px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+#j {
+    color: blueviolet;
+}
+
+.navigation .nav_links {
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 45%;
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+a:link,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: black;
+
+}
+
+li {
+    list-style: none;
+}
+
+li::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    display: block;
+    background: blueviolet;
+    transition: 300ms;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+.btn {
+    display: none;
+}
+
+
+.sec {
+    display: flex;
+    height: calc(100vh - 77px);
+}
+
+.sec1 {
+    flex: 1;
+    padding-top: 90px;
+    font-weight: 700;
+
+}
+
+.title {
+    font-size: 4rem;
+    padding: 0 0 15px 80px;
+}
+
+#name {
+    color: blueviolet;
+}
+
+.t2 {
+    font-size: 2.5rem;
+    padding: 1px 1px 25px 80px;
+}
+
+.sec p {
+    font-size: 1.1rem;
+    width: 70%;
+    padding: 10px 0 20px 80px;
+}
+
+.btns {
+    padding: 10px 80px;
+}
+
+.btns button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 5px;
+    color: white;
+    background: blueviolet;
+}
+
+.btns button:last-child {
+    margin-left: 10px;
+    color: blueviolet;
+    background: white;
+    border: 2px solid blueviolet;
+}
+
+.sec2 {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.sec2 img {
+    width: 100%;
+    transform: translateX(-80px);
+    z-index: 0;
+}
+
+.skills {
+    width: 100vw;
+    height: 100vh;
+}
+
+.skills .nav1 {
+    padding-top: 120px;
+    width: 100%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+}
+
+.skills p {
+    font-size: 1.2rem;
+}
+
+.skills-sec {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-top: 40px;
+}
+
+.skills-sec .nav2 {
+    text-align: center;
+}
+
+.frontend {
+    flex: 1;
+}
+
+.backend {
+    flex: 1;
+}
+
+.frontend .frontend-skills,
+.backend .backend-skills {
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.frontend .frontend-skills .f-img,
+.backend .backend-skills .b-img {
+    padding: 15px 0;
+}
+
+.frontend img,
+.backend img {
+    width: 60px;
+}
+
+@media (width <=1000px) {
+    .nav_links a {
+        display: none;
+    }
+
+    .skills {
+        height: auto;
+    }
+
+    .skills .nav1 {
+        padding-top: 60px;
+    }
+
+    .skills-sec {
+        flex-direction: column;
+    }
+
+    .frontend,
+    .backend {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .frontend .frontend-skills,
+    .backend .backend-skills {
+        padding-top: 30px;
+        width: 80%;
+    }
+
+    .sec1 {
+        flex: 1;
+    }
+
+    .sec2 {
+        flex: 0;
+    }
+
+    .sec p {
+        width: 85%;
+    }
+
+    .title,
+    #name,
+    .t2,
+    .sec p,
+    .btns {
+        padding-left: 25px;
+    }
+}
