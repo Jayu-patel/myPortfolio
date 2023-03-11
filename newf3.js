@@ -6,7 +6,7 @@ const list = document.querySelector(".nav_links")
 btn.addEventListener('click', () => {
     closebtn.style.display = "block"
     btn.style.display = "none"
-    list.style.width = '250px'
+    list.style.width = '200px'
     link.forEach(e => {
         e.style.display = 'block'
     })

@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    color: rgba(30, 30, 30, 0.9);
 }
 
 html {
@@ -30,12 +31,14 @@ html {
 }
 
 .navigation .logo {
-    padding: 15px 0 15px 40px;
+    padding: 10px 0 10px 40px;
     font-family: 'Alfa Slab One', cursive;
-    font-size: 2.5rem;
+    font-size: 0;
     font-weight: 800;
 }
-
+.logo span{
+    font-size: 40px;
+}
 #j {
     color: blueviolet;
 }
@@ -62,7 +65,7 @@ li {
     list-style: none;
 }
 
-li::after {
+/* li::after {
     content: "";
     width: 0%;
     height: 3px;
@@ -74,7 +77,7 @@ li::after {
 
 li:hover::after {
     width: 100%;
-}
+} */
 
 .btn {
     display: none;
@@ -98,6 +101,13 @@ li:hover::after {
     height: calc(100vh - 77px);
 }
 
+.line{
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: #111;
+    color: white;
+}
 .sec1 {
     flex: 1;
     padding-top: 90px;
@@ -119,7 +129,7 @@ li:hover::after {
 }
 
 .sec p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: 70%;
     padding: 10px 0 20px 80px;
 }
@@ -169,41 +179,53 @@ li:hover::after {
     margin: -80px 0 0 -80px;
 }
 
-.skills {
+.skills,
+.qualification {
     width: 100vw;
     height: 100vh;
 }
 
-.skills .nav1 {
+.skills .nav1, 
+.qualification .head-part {
     padding-top: 120px;
     width: 100%;
     text-align: center;
 }
 
-.skills h2 {
-    font-size: 2rem;
+.skills h1,
+.qualification h1 {
+    font-size: 2.5rem;
 }
 
-.skills p {
+.skills .nav1 p,
+.skills p,
+.qualification .head-part p {
     font-size: 1.2rem;
 }
+.skills .nav1 p,
+.qualification .head-part p,
+.work p,
+.edu p{
+    color: rgba(90, 90, 90, 0.8);
+}
 
-.skills-sec {
+.skills-sec,
+.qualification .edu-work {
     width: 80%;
     margin: auto;
     display: flex;
     padding-top: 40px;
 }
 
-.skills-sec .nav2 {
+.skills-sec .nav2,
+.qualification .nav3 {
     text-align: center;
 }
 
-.frontend {
-    flex: 1;
-}
-
-.backend {
+.frontend,
+.backend,
+.edu,
+.work {
     flex: 1;
 }
 
@@ -227,8 +249,44 @@ li:hover::after {
 .backend img {
     width: 60px;
 }
+.head-part{
+    padding-bottom: 40px;
+}
+.qualification{
+    overflow: hidden;
+}
+.edu-box,
+.work-box{
+    padding-top: 45px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 45px;
+    margin-left: 35%;
+}
+.edu-work h3{
+    padding-bottom: 8px;
+}
+.edu-work p{
+    padding-bottom: 4px;
+}
 
-@media (width <=1000px) {
+@media (width > 1000px){
+    li::after {
+        content: "";
+        width: 0%;
+        height: 3px;
+        display: block;
+        margin: auto;
+        background: blueviolet;
+        transition: 300ms;
+    }
+    
+    li:hover::after {
+        width: 100%;
+    }
+}
+@media (width <= 1000px) {
     .btn{
         display: block;
         position: absolute;
@@ -241,11 +299,11 @@ li:hover::after {
         padding: 20px;
     }
     .navigation .nav_links{
-        padding: 0 0 350px 0;
+        padding: 0 0 380px 0;
         color: white;
         background: blueviolet;
         position: absolute;
-        top: 86px;
+        top: 75px;
         right: 0;
         height: 100%;
         width: 0px;
@@ -253,7 +311,24 @@ li:hover::after {
         transition: width 0.3s;
         box-shadow: 25px 25px 80px -35px black;
     }
+    .navigation .nav_links .alink{
+        width: 200px;
+    }
+    .navigation .nav_links .alink:hover{
+        color: rgb(138, 43, 226);
+        background: rgb(235, 235, 235);
+        transition: 0.3s;
+    }
 
+    .title{
+        font-size: 3rem;
+    }
+    .t2{
+        font-size: 2rem;
+    }
+    .sec p{
+        font-size: 1rem;
+    }
 
 
     .skills {
@@ -299,5 +374,23 @@ li:hover::after {
     .sec p,
     .btns {
         padding-left: 25px;
+    }
+    .qualification{
+        height: auto;
+    }
+    .edu-work{
+        width: 75%;
+        flex-direction: column;
+    }
+    .edu-work .work{
+        padding-top: 70px;
+    }
+    .edu-work .edu-box,
+    .edu-work .work-box{
+        padding-top: 30px;
+        margin-left: 0;
+    }
+    .edu-work .work-box{
+        padding-bottom: 90px;
     }
 }
