@@ -186,7 +186,8 @@ li:hover::after {
 }
 
 .skills .nav1, 
-.qualification .head-part {
+.qualification .head-part,
+.project .head-part {
     padding-top: 120px;
     width: 100%;
     text-align: center;
@@ -204,6 +205,8 @@ li:hover::after {
 }
 .skills .nav1 p,
 .qualification .head-part p,
+.project .head-part p,
+.project .project-box p,
 .work p,
 .edu p{
     color: rgba(90, 90, 90, 0.8);
@@ -249,7 +252,8 @@ li:hover::after {
 .backend img {
     width: 60px;
 }
-.head-part{
+.qualification .head-part,
+.project .head-part{
     padding-bottom: 40px;
 }
 .qualification{
@@ -269,6 +273,32 @@ li:hover::after {
 }
 .edu-work p{
     padding-bottom: 4px;
+}
+.project{
+    width: 100%;
+    height: 100vh;
+}
+.project .project-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.project .project-box{
+    padding-top: 50px;
+    width: 70%;
+    margin: 0 auto;
+    gap: 30px;
+    display: flex;
+}
+.project .project-box .project1{
+    flex: 1;
+}
+.project .project-box .project1 p{
+    padding: 5px 0;
+}
+.project .project-box .project1 .image{
+    aspect-ratio: 16/9;
 }
 
 @media (width > 1000px){
@@ -333,6 +363,7 @@ li:hover::after {
 
     .skills {
         height: auto;
+        padding-top: 77px;
     }
 
     .skills .nav1 {
@@ -392,5 +423,13 @@ li:hover::after {
     }
     .edu-work .work-box{
         padding-bottom: 90px;
+    }
+    .project{
+        height: auto;
+    }
+    .project .project-box{
+        padding-top: 10px;
+        flex-direction: column;
+        padding-bottom: 40px;
     }
 }
