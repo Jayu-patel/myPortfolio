@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Ubuntu&display=swap');
 :root{
     --col1: #F5EAEA;
     --col2: #FFB84C;
@@ -47,11 +47,11 @@ html {
 .navigation .logo {
     padding: 10px 0 10px 40px;
     font-family: 'Alfa Slab One', cursive;
-    font-weight: 800;
+    font-family: 'Bebas Neue', cursive;
 }
 .logo h1{
     color: white;
-    font-size: 2.7rem;
+    font-size: 3.2rem;
 }
 .navigation .nav_links {
     font-size: 1.1rem;
@@ -108,6 +108,13 @@ li:hover::after {
 .sec {
     display: flex;
     height: calc(100vh - 77px);
+    overflow: hidden;
+    position: relative;
+}
+.square_shape{
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
 }
 
 .line{
@@ -191,8 +198,27 @@ li:hover::after {
 .skills{
     width: 100vw;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
-
+.dots.one{
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    top: 5rem;
+    right: -3rem;
+    transform: rotate(15deg);
+    opacity: 0.3;
+}
+.dots.two{
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    bottom: 6rem;
+    left: -4rem;
+    transform: rotate(30deg);
+    opacity: 0.3;
+}
 .skills .nav1, 
 .qualification .head-part,
 .project .head-part {
@@ -277,9 +303,20 @@ li:hover::after {
     padding-bottom: 40px;
 }
 .qualification{
+    position: relative;
     width: 100vw;
     overflow: hidden;
     padding-bottom: 60px;
+}
+.all_shape{
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    bottom: -1rem;
+    transform: rotate(15deg);
+    opacity: 0.3;
 }
 .qualification .edu-work {
     padding-top: 0px;
@@ -351,8 +388,25 @@ li:hover::after {
     }
 }
 @media (width <= 1000px) {
+    .dots.one{
+        top: 16rem;
+        right: -3rem;
+    }
+    .dots.two{
+        bottom: 6rem;
+        left: -4rem;
+    }
+    .square_shape{
+        width: 300px;
+        z-index: -1;
+        position: absolute;
+        bottom: -1rem;
+        left: -4rem;
+        transform: rotate(30deg);
+        opacity: 0.3;
+    }
     .logo h1{
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
     .btn{
         display: block;
@@ -368,7 +422,7 @@ li:hover::after {
         padding: 0 0 380px 0;
         position: absolute;
         background: white;
-        top: 64px;
+        top: 74px;
         right: 0;
         height: 100%;
         width: 0px;
