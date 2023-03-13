@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ubuntu&display=swap');
-
+:root{
+    --col1: #F5EAEA;
+    --col2: #FFB84C;
+    --col3: #F16767;
+    --col4: #A459D1;
+    --col5: #E9F1FA;
+    --col6: #00ABE4;
+    --col7: #0A1828;
+}
+/*
+Colors used: Light blue (#E9F1FA), 
+bright blue (#00ABE4), 
+white (#FFFFFF)*/
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +21,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    color: rgba(30, 30, 30, 0.9);
+    color: var(--col7);
+    background-color: var(--col5);
 }
 
 html {
@@ -27,22 +40,19 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background: white;
+    background: var(--col6);
+    color: rgba(255, 255, 255,0.9);
 }
 
 .navigation .logo {
     padding: 10px 0 10px 40px;
     font-family: 'Alfa Slab One', cursive;
-    font-size: 0;
     font-weight: 800;
 }
-.logo span{
-    font-size: 40px;
+.logo h1{
+    color: white;
+    font-size: 2.7rem;
 }
-#j {
-    color: blueviolet;
-}
-
 .navigation .nav_links {
     font-size: 1.1rem;
     font-weight: 500;
@@ -53,12 +63,11 @@ html {
     justify-content: space-around;
 }
 
-a:link,
-a:active,
-a:visited {
+.navigation a:link,
+.navigation a:active,
+.navigation a:visited {
     text-decoration: none;
-    color: black;
-
+    color: rgba(255, 255, 255,0.9);
 }
 
 li {
@@ -71,7 +80,7 @@ li {
     height: 3px;
     display: block;
     margin: auto;
-    background: blueviolet;
+    background: var(--col4);
     transition: 300ms;
 }
 
@@ -84,9 +93,9 @@ li:hover::after {
 }
 .btn button{
     padding: 8px 12px;
-    color: white;
-    background: blueviolet;
-    border: 1px solid blueviolet;
+    color: var(--col6);
+    background: rgba(255, 255, 255,0.9);
+    border: 1px solid rgba(255, 255, 255,0.9);
     outline: none;
     border-radius: 5px;
     cursor: pointer;
@@ -120,7 +129,7 @@ li:hover::after {
 }
 
 #name {
-    color: blueviolet;
+    color: var(--col6);
 }
 
 .t2 {
@@ -141,29 +150,29 @@ li:hover::after {
 .btns button {
     cursor: pointer;
     outline: none;
-    border: 2px solid blueviolet;
+    border: 2px solid var(--col6);
     padding: 14px 18px;
     border-radius: 5px;
     color: white;
-    background: blueviolet;
+    background: var(--col6);
 }
 
 .btns button:last-child {
     margin-left: 10px;
-    color: blueviolet;
-    background: white;
-    border: 2px solid blueviolet;
+    color: var(--col6);
+    background: var(--col5);
+    border: 2px solid var(--col6);
 }
 
 .btns button:hover:first-child{
-    color: blueviolet;
-    background: white;
-    border: 2px solid blueviolet;
+    color: var(--col6);
+    background: var(--col5);
+    border: 2px solid var(--col6);
     transition: 0.5s;
 }
 .btns button:hover:last-child{
-    color: white;
-    background: blueviolet;
+    color: var(--col5);
+    background: var(--col6);
     transition: 0.5s;
 }
 .sec2 {
@@ -179,8 +188,7 @@ li:hover::after {
     margin: -80px 0 0 -80px;
 }
 
-.skills,
-.qualification {
+.skills{
     width: 100vw;
     height: 100vh;
 }
@@ -194,7 +202,8 @@ li:hover::after {
 }
 
 .skills h1,
-.qualification h1 {
+.qualification h1,
+.project h1 {
     font-size: 2.5rem;
 }
 
@@ -218,13 +227,20 @@ li:hover::after {
     margin: auto;
     display: flex;
     padding-top: 40px;
+    gap: 60px;
 }
 
 .skills-sec .nav2,
 .qualification .nav3 {
     text-align: center;
 }
-
+.frontend,.backend{
+    color: rgba(255, 255, 255,0.9);
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(0, 171, 228, 0.8);
+    backdrop-filter: blur(15px);
+}
 .frontend,
 .backend,
 .edu,
@@ -257,7 +273,16 @@ li:hover::after {
     padding-bottom: 40px;
 }
 .qualification{
+    width: 100vw;
     overflow: hidden;
+    padding-bottom: 60px;
+}
+.edu,.work{
+    color: rgba(255, 255, 255,0.9);
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(0, 171, 228, 0.8);
+    backdrop-filter: blur(15px);
 }
 .edu-box,
 .work-box{
@@ -283,6 +308,7 @@ li:hover::after {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 10px 10px 20px -10px black ;
 }
 .project .project-box{
     padding-top: 50px;
@@ -295,10 +321,19 @@ li:hover::after {
     flex: 1;
 }
 .project .project-box .project1 p{
-    padding: 5px 0;
+    padding: 10px 0;
+}
+.project .project-box .project1 h3{
+    padding-bottom: 3px;
 }
 .project .project-box .project1 .image{
     aspect-ratio: 16/9;
+}
+.project a:link,
+.project a:active,
+.project a:visited {
+    text-decoration: none;
+    color: var(--col7);
 }
 
 @media (width > 1000px){
@@ -308,7 +343,7 @@ li:hover::after {
         height: 3px;
         display: block;
         margin: auto;
-        background: blueviolet;
+        background: var(--col4);
         transition: 300ms;
     }
     
@@ -324,16 +359,16 @@ li:hover::after {
         right: 30px;
     }
     .nav_links a {
-        color: white;
+        color: var(--col6);
         display: none;
         padding: 20px;
     }
     .navigation .nav_links{
         padding: 0 0 380px 0;
-        color: white;
-        background: blueviolet;
+        color: var(--col6);
+        background: white;
         position: absolute;
-        top: 75px;
+        top: 79px;
         right: 0;
         height: 100%;
         width: 0px;
@@ -345,8 +380,8 @@ li:hover::after {
         width: 200px;
     }
     .navigation .nav_links .alink:hover{
-        color: rgb(138, 43, 226);
-        background: rgb(235, 235, 235);
+        color: white;
+        background: var(--col6);
         transition: 0.3s;
     }
 
@@ -364,6 +399,7 @@ li:hover::after {
     .skills {
         height: auto;
         padding-top: 77px;
+        padding-bottom: 70px;
     }
 
     .skills .nav1 {
@@ -409,21 +445,20 @@ li:hover::after {
     .qualification{
         height: auto;
     }
-    .edu-work{
+    .qualification .edu-work{
         width: 75%;
         flex-direction: column;
+        padding-top: 20px;
     }
     .edu-work .work{
-        padding-top: 70px;
+        padding-top: 50px;
     }
     .edu-work .edu-box,
     .edu-work .work-box{
         padding-top: 30px;
         margin-left: 0;
     }
-    .edu-work .work-box{
-        padding-bottom: 90px;
-    }
+
     .project{
         height: auto;
     }
@@ -431,5 +466,8 @@ li:hover::after {
         padding-top: 10px;
         flex-direction: column;
         padding-bottom: 40px;
+    }
+    .project .project-box .project1 p{
+        padding: 5px 0;
     }
 }
