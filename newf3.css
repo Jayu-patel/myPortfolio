@@ -279,6 +279,9 @@ li:hover::after {
     overflow: hidden;
     padding-bottom: 60px;
 }
+.qualification .edu-work {
+    padding-top: 0px;
+}
 .edu-box,
 .work-box{
     padding-top: 45px;
@@ -306,7 +309,6 @@ li:hover::after {
     box-shadow: 10px 10px 20px -10px black;
 }
 .project .project-box{
-    padding-top: 50px;
     width: 70%;
     margin: 0 auto;
     gap: 30px;
@@ -445,7 +447,7 @@ li:hover::after {
     .qualification .edu-work{
         width: 75%;
         flex-direction: column;
-        padding-top: 0px;
+        padding-top: 10px;
     }
     .qualification .head-part{
         padding-bottom: 18px;
