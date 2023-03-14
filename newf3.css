@@ -397,6 +397,7 @@ li:hover::after {
         opacity: 0.3;
     }
 }
+  
 @media (width <= 1000px) {
     .dots.one{
         top: 16rem;
@@ -545,3 +546,22 @@ li:hover::after {
         padding-bottom: 5px;
     }
 }
+/* (width < 950px) and  */
+@media (width < 950px) and (orientation: landscape) {
+    .square_shape{
+        width: 300px;
+        z-index: -1;
+        position: absolute;
+        bottom: -1rem;
+        left: 80%;
+        transform: rotate(30deg);
+        opacity: 0.3;
+    }
+    .project{
+        height: auto;
+        overflow: visible;
+    }
+    .project .project1.project2{
+        padding-bottom: 60px;
+    }
+  }
