@@ -261,12 +261,10 @@ li:hover::after {
     text-align: center;
 }
 .frontend,.backend,.edu,.work{
-    color: rgba(255, 255, 255,0.9);
     color: black;
     padding: 40px;
     border-radius: 30px;
-    background: rgba(0, 171, 228, 0.8);
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 2px 1px #111,
     10px 10px 20px -10px black;
@@ -352,6 +350,7 @@ li:hover::after {
     margin: 0 auto;
     gap: 30px;
     display: flex;
+    padding-bottom: 3rem;
 }
 .project .project-box .project1{
     flex: 1;
@@ -385,6 +384,17 @@ li:hover::after {
     
     li:hover::after {
         width: 100%;
+    }
+}
+@media (height < 900px){
+    .square_shape{
+        width: 300px;
+        z-index: -2;
+        position: absolute;
+        bottom: -5rem;
+        left: -4rem;
+        transform: rotate(30deg);
+        opacity: 0.3;
     }
 }
 @media (width <= 1000px) {
@@ -518,12 +528,14 @@ li:hover::after {
     }
 
     .project{
-        height: auto;
+        height: 110vh;
+        overflow: hidden;
     }
     .project .project-box{
         padding-top: 10px;
         flex-direction: column;
         padding-bottom: 40px;
+        padding-bottom: 0px;
     }
     .project .project-box .project1 p{
         padding: 10px 0;
