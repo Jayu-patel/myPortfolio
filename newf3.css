@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Ubuntu&display=swap');
-:root{
+
+:root {
     --col1: #F5EAEA;
     --col2: #FFB84C;
     --col3: #F16767;
@@ -8,6 +9,7 @@
     --col6: #00ABE4;
     --col7: #0A1828;
 }
+
 /*
 Colors used: Light blue (#E9F1FA), 
 bright blue (#00ABE4), 
@@ -41,7 +43,7 @@ html {
     display: flex;
     justify-content: space-between;
     background: var(--col6);
-    color: rgba(255, 255, 255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .navigation .logo {
@@ -49,10 +51,12 @@ html {
     font-family: 'Alfa Slab One', cursive;
     font-family: 'Bebas Neue', cursive;
 }
-.logo h1{
+
+.logo h1 {
     color: white;
     font-size: 3.2rem;
 }
+
 .navigation .nav_links {
     font-size: 1.1rem;
     font-weight: 500;
@@ -67,7 +71,7 @@ html {
 .navigation a:active,
 .navigation a:visited {
     text-decoration: none;
-    color: rgba(255, 255, 255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 li {
@@ -91,16 +95,18 @@ li:hover::after {
 .btn {
     display: none;
 }
-.btn button{
+
+.btn button {
     padding: 8px 12px;
     color: var(--col6);
-    background: rgba(255, 255, 255,1);
-    border: 1px solid rgba(255, 255, 255,1);
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
     outline: none;
     border-radius: 5px;
     cursor: pointer;
 }
-#closebtn{
+
+#closebtn {
     display: none;
     padding: 8px 14px;
 }
@@ -111,19 +117,21 @@ li:hover::after {
     overflow: hidden;
     position: relative;
 }
-.square_shape{
+
+.square_shape {
     z-index: -1;
     position: absolute;
     opacity: 0;
 }
 
-.line{
+.line {
     margin: auto;
     width: 90%;
     height: 1px;
     background-color: #111;
     color: white;
 }
+
 .sec1 {
     flex: 1;
     padding-top: 90px;
@@ -171,17 +179,19 @@ li:hover::after {
     border: 2px solid var(--col6);
 }
 
-.btns button:hover:first-child{
+.btns button:hover:first-child {
     color: var(--col6);
     background: var(--col5);
     border: 2px solid var(--col6);
     transition: 0.5s;
 }
-.btns button:hover:last-child{
+
+.btns button:hover:last-child {
     color: var(--col5);
     background: var(--col6);
     transition: 0.5s;
 }
+
 .sec2 {
     flex: 1;
     width: 100%;
@@ -195,13 +205,13 @@ li:hover::after {
     margin: -80px 0 0 -80px;
 }
 
-.skills{
+.skills {
     width: 100vw;
-    height: 100vh;
     position: relative;
     overflow: hidden;
 }
-.dots.one{
+
+.dots.one {
     width: 300px;
     z-index: -1;
     position: absolute;
@@ -210,7 +220,8 @@ li:hover::after {
     transform: rotate(15deg);
     opacity: 0.3;
 }
-.dots.two{
+
+.dots.two {
     width: 300px;
     z-index: -1;
     position: absolute;
@@ -219,7 +230,8 @@ li:hover::after {
     transform: rotate(30deg);
     opacity: 0.3;
 }
-.skills .nav1, 
+
+.skills .nav1,
 .qualification .head-part,
 .project .head-part {
     padding-top: 120px;
@@ -238,12 +250,13 @@ li:hover::after {
 .qualification .head-part p {
     font-size: 1.2rem;
 }
+
 .skills .nav1 p,
 .qualification .head-part p,
 .project .head-part p,
 .project .project-box p,
 .work p,
-.edu p{
+.edu p {
     color: rgba(90, 90, 90, 0.8);
 }
 
@@ -260,15 +273,20 @@ li:hover::after {
 .qualification .nav3 {
     text-align: center;
 }
-.frontend,.backend,.edu,.work{
+
+.frontend,
+.backend,
+.edu,
+.work {
     color: black;
     padding: 40px;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 2px 1px #111,
-    10px 10px 20px -10px black;
+        10px 10px 20px -10px black;
 }
+
 .frontend,
 .backend,
 .edu,
@@ -296,17 +314,20 @@ li:hover::after {
 .backend img {
     width: 60px;
 }
+
 .qualification .head-part,
-.project .head-part{
+.project .head-part {
     padding-bottom: 40px;
 }
-.qualification{
+
+.qualification {
     position: relative;
     width: 100vw;
     overflow: hidden;
     padding-bottom: 60px;
 }
-.all_shape{
+
+.all_shape {
     width: 300px;
     z-index: -1;
     position: absolute;
@@ -316,11 +337,13 @@ li:hover::after {
     transform: rotate(15deg);
     opacity: 0.3;
 }
+
 .qualification .edu-work {
     padding-top: 0px;
 }
+
 .edu-box,
-.work-box{
+.work-box {
     padding-top: 45px;
     width: 100%;
     display: grid;
@@ -328,42 +351,51 @@ li:hover::after {
     gap: 45px;
     margin-left: 31%;
 }
-.edu-work h3{
+
+.edu-work h3 {
     padding-bottom: 8px;
 }
-.edu-work p{
+
+.edu-work p {
     padding-bottom: 4px;
 }
-.project{
+
+.project {
     width: 100%;
-    height: 100vh;
 }
-.project .project-box img{
+
+.project .project-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 10px 10px 20px -10px black;
 }
-.project .project-box{
+
+.project .project-box {
     width: 70%;
     margin: 0 auto;
     gap: 30px;
     display: flex;
     padding-bottom: 3rem;
 }
-.project .project-box .project1{
+
+.project .project-box .project1 {
     flex: 1;
 }
-.project .project-box .project1 p{
+
+.project .project-box .project1 p {
     padding: 10px 0;
 }
-.project .project-box .project1 h3{
+
+.project .project-box .project1 h3 {
     padding-bottom: 3px;
 }
-.project .project-box .project1 .image{
+
+.project .project-box .project1 .image {
     aspect-ratio: 16/9;
 }
+
 .project a:link,
 .project a:active,
 .project a:visited {
@@ -371,7 +403,45 @@ li:hover::after {
     color: var(--col7);
 }
 
-@media (width > 1000px){
+#box {
+    display: none;
+    width: 90%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+#box button {
+    padding: 10px 14px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    color: var(--col1);
+    background: var(--col6);
+}
+
+.square_shape,
+.dots {
+    animation: rotate1 100s linear infinite;
+}
+
+.dots.two,
+.all_shape {
+    animation: rotate1 100s linear infinite reverse;
+}
+
+@keyframes car {
+    0%{
+        background: hsl(200, 20%, 70%);
+    }
+    100%{
+        background: hsl(200, 20%, 95%);
+    }
+    
+}
+
+@media (width > 1000px) {
     li::after {
         content: "";
         width: 0%;
@@ -381,13 +451,17 @@ li:hover::after {
         background: var(--col5);
         transition: 300ms;
     }
-    
+
     li:hover::after {
         width: 100%;
     }
+    .skills {
+        height: 100vh;
+    }
 }
-@media (height < 900px){
-    .square_shape{
+
+@media (height < 900px) {
+    .square_shape {
         width: 300px;
         z-index: -2;
         position: absolute;
@@ -397,17 +471,23 @@ li:hover::after {
         opacity: 0.3;
     }
 }
-  
-@media (width <= 1000px) {
-    .dots.one{
+
+@media (width <=1000px) {
+    #parent_box{
+        flex-direction: column;
+        height: auto;
+    }
+    .dots.one {
         top: 16rem;
         right: -3rem;
     }
-    .dots.two{
+
+    .dots.two {
         bottom: 6rem;
         left: -4rem;
     }
-    .square_shape{
+
+    .square_shape {
         width: 300px;
         z-index: -1;
         position: absolute;
@@ -416,20 +496,24 @@ li:hover::after {
         transform: rotate(30deg);
         opacity: 0.3;
     }
-    .logo h1{
+
+    .logo h1 {
         font-size: 2.6rem;
     }
-    .btn{
+
+    .btn {
         display: block;
         position: absolute;
         top: 16px;
         right: 30px;
     }
+
     .nav_links a {
         display: none;
         padding: 20px;
     }
-    .navigation .nav_links{
+
+    .navigation .nav_links {
         padding: 0 0 380px 0;
         position: absolute;
         background: white;
@@ -441,23 +525,27 @@ li:hover::after {
         transition: width 0.3s;
         box-shadow: 25px 25px 80px -35px black;
     }
-    .navigation .nav_links .alink{
+
+    .navigation .nav_links .alink {
         color: var(--col7);
         width: 200px;
     }
-    .navigation .nav_links .alink:hover{
+
+    .navigation .nav_links .alink:hover {
         color: white;
         background: var(--col6);
         transition: 0.3s;
     }
 
-    .title{
+    .title {
         font-size: 3rem;
     }
-    .t2{
+
+    .t2 {
         font-size: 2rem;
     }
-    .sec p{
+
+    .sec p {
         font-size: 1rem;
     }
 
@@ -508,47 +596,55 @@ li:hover::after {
     .btns {
         padding-left: 25px;
     }
-    .qualification{
+
+    .qualification {
         height: auto;
     }
-    .qualification .edu-work{
+
+    .qualification .edu-work {
         width: 75%;
         flex-direction: column;
         padding-top: 10px;
     }
-    .qualification .head-part{
+
+    .qualification .head-part {
         padding-bottom: 18px;
     }
-    .edu-work .work{
+
+    .edu-work .work {
         padding-top: 50px;
     }
+
     .edu-work .edu-box,
-    .edu-work .work-box{
+    .edu-work .work-box {
         padding-top: 30px;
         margin-left: 0;
     }
 
-    .project{
-        height: 110vh;
+    .project {
+        height: auto;
         overflow: hidden;
     }
-    .project .project-box{
+
+    .project .project-box {
         padding-top: 10px;
         flex-direction: column;
         padding-bottom: 40px;
-        padding-bottom: 0px;
     }
-    .project .project-box .project1 p{
+
+    .project .project-box .project1 p {
         padding: 10px 0;
         padding-top: 12px;
     }
-    .project .project-box .project1 h3{
+
+    .project .project-box .project1 h3 {
         padding-bottom: 5px;
     }
 }
+
 /* (width < 950px) and  */
 @media (width < 950px) and (orientation: landscape) {
-    .square_shape{
+    .square_shape {
         width: 300px;
         z-index: -1;
         position: absolute;
@@ -557,11 +653,29 @@ li:hover::after {
         transform: rotate(30deg);
         opacity: 0.3;
     }
-    .project{
+
+    .project {
         height: auto;
         overflow: visible;
     }
-    .project .project1.project2{
+
+    .project .project1.project2 {
         padding-bottom: 60px;
     }
-  }
+}
+
+@media (height < 375px) {
+    .sec {
+        height: auto;
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
