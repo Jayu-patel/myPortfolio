@@ -470,7 +470,7 @@ li:hover::after {
     padding: 30px 0 30px 100px;
 }
 .email{
-    padding-top: 10px;
+    padding: 10px 0;
     color: black;
 }
 .form{
@@ -754,7 +754,12 @@ textarea{
     .project .project-box .project1 h3 {
         padding-bottom: 5px;
     }
-
+    .contact .box .main_sec2 .box2 .inner_box .title1{
+        padding-bottom: 60px;
+    }
+    .contact .box .main_sec2 .box2{
+        padding-bottom: 80px;
+    }
     .contact,.contact .box{
         height: auto;
     }
