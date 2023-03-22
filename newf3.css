@@ -34,7 +34,7 @@ html {
 #nav {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     box-shadow: 0px 2px 4px 2px #111;
 }
 
@@ -218,7 +218,7 @@ li:hover::after {
     top: 5rem;
     right: -3rem;
     transform: rotate(15deg);
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .dots.two {
@@ -228,12 +228,13 @@ li:hover::after {
     bottom: 6rem;
     left: -4rem;
     transform: rotate(30deg);
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .skills .nav1,
 .qualification .head-part,
-.project .head-part {
+.project .head-part,
+.contact .main_sec1 {
     padding-top: 120px;
     width: 100%;
     text-align: center;
@@ -241,13 +242,15 @@ li:hover::after {
 
 .skills h1,
 .qualification h1,
-.project h1 {
+.project h1,
+.contact h1 {
     font-size: 2.5rem;
 }
 
 .skills .nav1 p,
 .skills p,
-.qualification .head-part p {
+.qualification .head-part p,
+.contact .main_sec1 p {
     font-size: 1.2rem;
 }
 
@@ -256,7 +259,9 @@ li:hover::after {
 .project .head-part p,
 .project .project-box p,
 .work p,
-.edu p {
+.edu p,
+.contact .main_sec1 p,
+.contact .box .main_sec2 .box1 p{
     color: rgba(90, 90, 90, 0.8);
 }
 
@@ -335,7 +340,7 @@ li:hover::after {
     left: 40%;
     bottom: -1rem;
     transform: rotate(15deg);
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .qualification .edu-work {
@@ -361,6 +366,7 @@ li:hover::after {
 }
 
 .project {
+    height: 100vh;
     width: 100%;
 }
 
@@ -398,7 +404,10 @@ li:hover::after {
 
 .project a:link,
 .project a:active,
-.project a:visited {
+.project a:visited,
+.contact a:link,
+.contact a:active,
+.contact a:visited{
     text-decoration: none;
     color: var(--col7);
 }
@@ -430,7 +439,102 @@ li:hover::after {
 .all_shape {
     animation: rotate1 100s linear infinite reverse;
 }
-
+.contact{
+    width: 100%;
+    height: 100vh ;
+}
+.contact .box{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.contact .box .main_sec2{
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+}
+.contact .box .main_sec2 .box1,
+.contact .box .main_sec2 .box2{
+    flex: 1;
+    padding: 10px 20px;
+}
+.contact .box .main_sec2 .box1 h3{
+    padding: 5px 0;
+}
+.contact .box .main_sec2 .box1 .inner_box .title1,
+.contact .box .main_sec2 .box2 .inner_box .title1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.email,.whatsapp,.messanger{
+    padding: 30px 0 30px 100px;
+}
+.email{
+    padding-top: 10px;
+    color: black;
+}
+.form{
+    position: relative;
+}
+.form1{
+    position: relative;
+    height: 70px;
+    margin-bottom: 40px;
+}
+.form1:last-child{
+    height: 180px;
+    margin-bottom: 10px;
+}
+textarea{
+    resize: none;
+}
+.input_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+    padding: 20px;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+    font-size: 1rem ;
+    background: transparent;
+}
+.tage_name{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--col5);
+    z-index: 2;
+    padding: 5px;
+}
+#sub_btn{
+    cursor: pointer;
+    outline: none;
+    padding: 10px 12px;
+    margin-left: 15px;
+    color: var(--col6);
+    background: white;
+    border: 2px solid var(--col6);
+    border-radius: 5px;
+}
+#sub_btn:hover{
+    color: var(--col5);
+    background: var(--col6);
+    transition: 0.5s;
+}
+#result_text{
+    margin-left: 10px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
 @keyframes car {
     0%{
         background: hsl(200, 20%, 70%);
@@ -459,6 +563,16 @@ li:hover::after {
         height: 100vh;
     }
 }
+@media (width > 1000px) and (height < 700px){
+    .sec, .skills, .project{
+        height: auto;
+    }
+}
+@media (width < 400px) and (height < 600px){
+    .sec{
+        height: auto;
+    }
+}
 
 @media (height < 900px) {
     .square_shape {
@@ -468,7 +582,7 @@ li:hover::after {
         bottom: -5rem;
         left: -4rem;
         transform: rotate(30deg);
-        opacity: 0.3;
+        opacity: 0.2;
     }
 }
 
@@ -494,7 +608,7 @@ li:hover::after {
         bottom: -1rem;
         left: -4rem;
         transform: rotate(30deg);
-        opacity: 0.3;
+        opacity: 0.2;
     }
 
     .logo h1 {
@@ -640,6 +754,20 @@ li:hover::after {
     .project .project-box .project1 h3 {
         padding-bottom: 5px;
     }
+
+    .contact,.contact .box{
+        height: auto;
+    }
+    .contact .box .main_sec2 .box1 .inner_box,
+    .contact .box .main_sec2 .box2 .inner_box{
+        padding-top: 50px;
+    }
+    .contact .box .main_sec2{
+        flex-direction: column;
+    }
+    .email,.whatsapp,.messanger{
+    padding-left: 0;
+}
 }
 
 /* (width < 950px) and  */
@@ -651,7 +779,7 @@ li:hover::after {
         bottom: -1rem;
         left: 80%;
         transform: rotate(30deg);
-        opacity: 0.3;
+        opacity: 0.2;
     }
 
     .project {
