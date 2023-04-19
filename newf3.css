@@ -573,7 +573,7 @@ textarea{
         height: auto;
     }
 }
-@media (width > 1000px) and (height < 800px){
+@media (width > 1000px) and (height < 600px){
     .sec, .skills, .project{
         height: auto;
     }
