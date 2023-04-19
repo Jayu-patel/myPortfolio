@@ -9,7 +9,6 @@
     --col6: #00ABE4;
     --col7: #0A1828;
 }
-
 /*
 Colors used: Light blue (#E9F1FA), 
 bright blue (#00ABE4), 
@@ -564,7 +563,7 @@ textarea{
         height: 100vh;
     }
 }
-@media (width > 1000px) and (height < 700px){
+@media (width > 800px) and (height < 450px){
     .sec, .skills, .project{
         height: auto;
     }
@@ -572,6 +571,17 @@ textarea{
 @media (width < 400px) and (height < 600px){
     .sec{
         height: auto;
+    }
+}
+@media (width > 1000px) and (height < 800px){
+    .sec, .skills, .project{
+        height: auto;
+    }
+    .btns {
+        padding-bottom: 60px;
+    }
+    .skills-sec{
+        padding-bottom: 60px;
     }
 }
 
@@ -688,7 +698,7 @@ textarea{
     .frontend .frontend-skills,
     .backend .backend-skills {
         padding-top: 30px;
-        width: 80%;
+        width: 100%;
     }
 
     .sec1 {
@@ -801,6 +811,12 @@ textarea{
 @media (height < 375px) {
     .sec {
         height: auto;
+    }
+}
+@media (width < 340px){
+    .frontend .frontend-skills,
+    .backend .backend-skills {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
