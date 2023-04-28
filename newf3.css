@@ -598,9 +598,6 @@ textarea{
 }
 
 @media screen and (width <=1000px) {
-    body{
-        background: red;
-    }
     #parent_box{
         flex-direction: column;
         height: auto;
