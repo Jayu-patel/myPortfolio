@@ -545,7 +545,7 @@ textarea{
     
 }
 
-@media (width > 1000px) {
+@media screen and (width > 1000px) {
     li::after {
         content: "";
         width: 0%;
@@ -563,17 +563,17 @@ textarea{
         height: 100vh;
     }
 }
-@media (width > 800px) and (height < 450px){
+@media screen and (width > 800px) and (height < 450px){
     .sec, .skills, .project{
         height: auto;
     }
 }
-@media (width < 400px) and (height < 600px){
+@media screen and (width < 400px) and (height < 600px){
     .sec{
         height: auto;
     }
 }
-@media (width > 1000px) and (height < 600px){
+@media screen and (width > 1000px) and (height < 600px){
     .sec, .skills, .project{
         height: auto;
     }
@@ -585,7 +585,7 @@ textarea{
     }
 }
 
-@media (height < 900px) {
+@media screen and (height < 900px) {
     .square_shape {
         width: 300px;
         z-index: -2;
@@ -597,7 +597,7 @@ textarea{
     }
 }
 
-@media (width <=1000px) {
+@media screen and (width <=1000px) {
     #parent_box{
         flex-direction: column;
         height: auto;
@@ -787,7 +787,7 @@ textarea{
 }
 
 /* (width < 950px) and  */
-@media (width < 950px) and (orientation: landscape) {
+@media screen and (width < 950px) and (orientation: landscape) {
     .square_shape {
         width: 300px;
         z-index: -1;
@@ -808,12 +808,12 @@ textarea{
     }
 }
 
-@media (height < 375px) {
+@media screen and (height < 375px) {
     .sec {
         height: auto;
     }
 }
-@media (width < 340px){
+@media screen and (width < 340px){
     .frontend .frontend-skills,
     .backend .backend-skills {
         grid-template-columns: repeat(1, 1fr);
